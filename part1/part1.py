@@ -35,7 +35,7 @@ with open("part1/input/lvl1-4.inp") as currentfile:
         newdict["timestamp"] = int(file_content.pop(0))
         newdict["x"] = int(file_content.pop(0))
         newdict["y"] = int(file_content.pop(0))
-        matrix = [[int(file_content.pop(0)) for x in range(newdict["x"])] for y in range(newdict["y"])] 
+        matrix = [[int(file_content.pop(0)) for x in range(newdict["y"])] for y in range(newdict["x"])] 
         result = check_asteroid(newdict["x"], newdict["y"], matrix)
         if result:
             processed_list.append(int(newdict["timestamp"]))
